@@ -7,8 +7,15 @@ sealed class IdentifyEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class LoadIdentify extends IdentifyEvent {
-  const LoadIdentify();
+class LoadIdentifyEvent extends IdentifyEvent {
+  const LoadIdentifyEvent();
+
+  @override
+  List<Object> get props => [];
+}
+
+class IdentifyServerStatusEvent extends IdentifyEvent {
+  const IdentifyServerStatusEvent();
 
   @override
   List<Object> get props => [];

@@ -1,12 +1,18 @@
+import 'dart:io';
+
 import 'package:flora_sense/features/identify/entities/plant_entity.dart';
-import 'package:flora_sense/features/identify/providers/identify_provider.dart';
+import 'package:flora_sense/features/identify/services/identify_api_service.dart';
 
 class IdentifyRepository {
-  final IdentifyProvider identifyProvider;
+  final IdentifyApiService identifyApiService;
 
-  const IdentifyRepository({required this.identifyProvider});
+  const IdentifyRepository({required this.identifyApiService});
 
-  Future<PlantEntity> identify() async {
-    return await identifyProvider.identify();
+  Future<PlantEntity> identify(File imageFile) async {
+    return await identifyApiService.identify(imageFile);
+  }
+
+  Future<bool> serverStatus() async {
+    return await identifyApiService.serverStatus();
   }
 }

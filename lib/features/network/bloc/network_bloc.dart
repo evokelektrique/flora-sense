@@ -10,7 +10,7 @@ class NetworkBloc extends Bloc<NetworkEvent, NetworkState> {
 
   NetworkBloc(this._connectivity) : super(NetworkDisconnected()) {
     _connectivity.onConnectivityChanged.listen((List<ConnectivityResult> result) {
-      final isConnected = result.contains(ConnectivityResult.none) ? false : true;
+      final bool isConnected = result.contains(ConnectivityResult.none) ? false : true;
       add(NetworkStatusChanged(isConnected: isConnected));
     });
 

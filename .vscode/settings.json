@@ -1,0 +1,8 @@
+{
+  "dart.debugExternalLibraries": false,
+  "dart.debugSdkLibraries": false,
+  "files.exclude": {
+    "**/build/": true,
+    "**/pubspec.lock": true
+  }
+}

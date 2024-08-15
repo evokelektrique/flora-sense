@@ -4,8 +4,7 @@ import 'package:flora_sense/main.dart';
 class NetworkHelper {
   static final NetworkBloc _networkBloc = serviceLocator<NetworkBloc>();
 
-
-  static bool checkInternetConnection()  {
+  static bool checkInternetConnection() {
     final currentState = _networkBloc.state;
 
     if (currentState is NetworkConnected) {
